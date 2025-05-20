@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarbonCars - Premium Car Spare Parts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/img/imggg.png" />
+
+ 
+</head>
+<body class="font-sans">
+  <!-- Navigation -->
+  <nav id="desktop-menu" class="hidden md:block shadow-md w-full relative bg-red-600">
+    <div class="max-w-screen-xl w-full mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <a href="index.html" class="text-xl bungee-tint-regular flex items-center">
+          <img src="/img/imggg.png" alt="Logo" class="w-24 h-12 object-contain"/>
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="flex flex-wrap gap-6 items-center">
+          <!-- Our Company Dropdown -->
+          <li class="group relative">
+            <a href="#" class="js-dropdown-toggle flex items-center text-white hover:text-blue-600 transition">
+              Our Company <i class="fa-solid fa-plus ml-1 text-sm"></i>
+            </a>
+            <ul class="submenu absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg opacity-0 invisible transition-opacity duration-300 z-10">
+              <li class="hover:bg-blue-50"><a href="https://yourdomain.com/about-us/" class="block px-4 py-2">About</a></li>
+              <li class="hover:bg-blue-50"><a href="https://yourdomain.com/event/" class="block px-4 py-2">Event</a></li>
+              <li class="hover:bg-blue-50"><a href="https://yourdomain.com/careers/" class="block px-4 py-2">Careers</a></li>
+              <li class="hover:bg-blue-50"><a href="https://yourdomain.com/recommendation/" class="block px-4 py-2">Recommendation</a></li>
+              <li class="hover:bg-blue-50"><a href="https://yourdomain.com/blog/" class="block px-4 py-2">Blog</a></li>
+              <li class="hover:bg-blue-50"><a href="https://yourdomain.com/team/" class="block px-4 py-2">Our Team</a></li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="group relative">
+            <a href="#" class="js-dropdown-toggle flex items-center text-white hover:text-blue-600 transition">
+              Services <i class="fa-solid fa-plus ml-1 text-sm"></i>
+            </a>
+            <ul class="submenu absolute left-0 mt-2 w-64 bg-white border rounded-md shadow-lg opacity-0 invisible transition-opacity duration-300 z-10">
+              <li class="group relative hover:bg-blue-50">
+                <a href="#" class="dropdown-trigger flex justify-between items-center px-4 py-2">
+                  Car Repair <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+                <ul class="submenu absolute top-0 left-full w-64 bg-white border rounded-md shadow-lg opacity-0 invisible transition-opacity duration-300 z-10">
+                  <li class="hover:bg-blue-50"><a href="#" class="block px-4 py-2">Electrical</a></li>
+                  <li class="hover:bg-blue-50"><a href="#" class="block px-4 py-2">Mechanical</a></li>
+                </ul>
+              </li>
+              <li class="hover:bg-blue-50"><a href="bettery.html" class="block px-4 py-2">Battery Change</a></li>
+              <li class="hover:bg-blue-50"><a href="#" class="block px-4 py-2">Tyre Change</a></li>
+            </ul>
+          </li>
+
+          <!-- Other Desktop Items -->
+          <li><a href="#" class="text-white hover:text-blue-600 transition">Car Brands</a></li>
+          <li><a href="#" class="text-white hover:text-blue-600 transition">Products</a></li>
+          <li>
+            <a href="https://yourdomain.com/gold-package/" class="bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600 transition">
+              Gold Packages
+            </a>
+          </li>
+          <li>
+            <a href="tel:+97180078278" class="flex items-center text-white hover:text-blue-600 transition">
+              <i class="fa-solid fa-phone mr-1"></i>800‑78278
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- JavaScript for dropdown toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggles = document.querySelectorAll('#desktop-menu .js-dropdown-toggle');
+
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', e => {
+          e.preventDefault();
+          const submenu = toggle.nextElementSibling;
+          submenu.classList.toggle('invisible');
+          submenu.classList.toggle('opacity-0');
+          submenu.classList.toggle('visible');
+          submenu.classList.toggle('opacity-100');
+        });
+      });
+
+      // Close all dropdowns when clicking outside
+      document.addEventListener('click', e => {
+        toggles.forEach(toggle => {
+          const submenu = toggle.nextElementSibling;
+          if (!toggle.parentElement.contains(e.target)) {
+            submenu.classList.add('invisible', 'opacity-0');
+            submenu.classList.remove('visible', 'opacity-100');
+          }
+        });
+      });
+    });
+  </script>
+  
+  <nav id="mobile-menu-nav" class="md:hidden shadow-md w-full bg-red-500">
+    <div class="max-w-screen-xl mx-auto px-4 flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center">
+        <img src="/img/imggg.png" alt="Logo" class="w-24 h-12 object-contain"/>
+      </a>
+      <!-- Toggle button -->
+      <button id="mobile-menu-button" class="p-2 focus:outline-none">
+        <i class="fa-solid fa-bars text-2xl text-gray-700"></i>
+      </button>
+    </div>
+  
+    <!-- Collapsible Mobile Menu -->
+    <div id="mobile-menu" class="hidden border-t bg-red-500">
+      <ul class="px-4 py-4 space-y-2">
+        <!-- Our Company -->
+        <li>
+          <button class="w-full flex justify-between items-center py-2 submenu-btn focus:outline-none">
+            <span class="text-white">Our Company</span>
+            <i class="fa-solid fa-chevron-down text-white submenu-icon transition-transform"></i>
+          </button>
+          <ul class="pl-4 mt-1 space-y-1 hidden">
+            <li><a href="#" class="block py-1 text-white">About</a></li>
+            <li><a href="#" class="block py-1 text-white">Event</a></li>
+            <li><a href="#" class="block py-1 text-white">Careers</a></li>
+            <li><a href="#" class="block py-1 text-white">Recommendation</a></li>
+            <li><a href="#" class="block py-1 text-white">Blog</a></li>
+            <li><a href="#" class="block py-1 text-white">Our Team</a></li>
+          </ul>
+        </li>
+  
+        <!-- Services -->
+        <li>
+          <button class="w-full flex justify-between items-center py-2 submenu-btn focus:outline-none">
+            <span class="text-white">Services</span>
+            <i class="fa-solid fa-chevron-down text-white submenu-icon transition-transform"></i>
+          </button>
+          <ul class="pl-4 mt-1 space-y-1 hidden">
+            <!-- Car Repair with nested submenu -->
+            <li>
+              <button class="w-full flex justify-between items-center py-2 submenu-btn focus:outline-none">
+                <span class="text-white">Car Repair</span>
+                <i class="fa-solid fa-chevron-down text-gray-500 submenu-icon transition-transform"></i>
+              </button>
+              <ul class="pl-4 mt-1 space-y-1 hidden">
+                <li><a href="#" class="block py-1 text-white">Electrical</a></li>
+                <li><a href="#" class="block py-1 text-white">Mechanical</a></li>
+              </ul>
+            </li>
+            <li><a href="bettery.html" class="block py-2 text-white">Battery Change</a></li>
+            <li><a href="#" class="block py-2 text-white">Tyre Change</a></li>
+          </ul>
+        </li>
+  
+        <!-- Other Mobile Items -->
+        <li><a href="#" class="block py-2 text-white">Car Brands</a></li>
+        <li><a href="#" class="block py-2 text-white">Products</a></li>
+        <li><a href="#" class="block py-2 text-blue-600 font-medium">Gold Packages</a></li>
+        <li>
+          <a href="tel:+97180078278" class="flex items-center py-2 text-gray-700">
+            <i class="fa-solid fa-phone mr-2"></i>800‑78278
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <script>
+    // Desktop dropdown logic
+    document.addEventListener("DOMContentLoaded", function() {
+      let activeMenu = null;
+      let leaveTimer = null;
+  
+      document.querySelectorAll(".dropdown-trigger").forEach(trigger => {
+        trigger.addEventListener("click", function(e) {
+          e.preventDefault();
+          const menu = this.nextElementSibling;
+          const isOpen = menu.classList.contains("show");
+  
+          if (activeMenu && activeMenu !== menu) {
+            closeMenu(activeMenu);
+          }
+  
+          if (!isOpen) {
+            openMenu(menu, trigger);
+          } else {
+            closeMenu(menu);
+          }
+        });
+      });
+  
+      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.addEventListener("mouseenter", () => clearTimeout(leaveTimer));
+        menu.addEventListener("mouseleave", () => startCloseTimer(menu));
+      });
+  
+      function openMenu(menu, trigger) {
+        menu.classList.add("show");
+        trigger.querySelector("i")?.classList.add("active");
+        activeMenu = menu;
+      }
+  
+      function closeMenu(menu) {
+        menu.classList.remove("show");
+        menu.parentElement.querySelector(".dropdown-trigger i")?.classList.remove("active");
+        activeMenu = null;
+      }
+  
+      function startCloseTimer(menu) {
+        leaveTimer = setTimeout(() => {
+          if (activeMenu === menu) {
+            closeMenu(menu);
+          }
+        }, 300);
+      }
+  
+      document.addEventListener("click", function(e) {
+        if (!e.target.closest(".dropdown-menu") && !e.target.closest(".dropdown-trigger")) {
+          document.querySelectorAll(".dropdown-menu").forEach(menu => closeMenu(menu));
+        }
+      });
+    });
+  
+    // Mobile menu logic
+    const mobileBtn = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    mobileBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  
+    document.querySelectorAll(".submenu-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const sub = btn.nextElementSibling;
+        const icon = btn.querySelector(".submenu-icon");
+        sub.classList.toggle("hidden");
+        icon.classList.toggle("rotate-180");
+      });
+    });
+  </script>
+
+
+<section class="py-2 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-red-800 mb-4">Premium Automotive Services</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Experience unmatched quality with our comprehensive range of professional vehicle care solutions</p>
+    </div>
+
+    <!-- Enhanced Scrollable Section -->
+    <div class="relative">
+      <!-- Navigation Controls -->
+      <button onclick="scrollHorizontally(-300)" id="scroll-right"
+              class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm p-4 rounded-full shadow-xl hover:bg-white transition-all transform translate-x-2 md:translate-x-0">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      
+      <button onclick="scrollHorizontally(300)" id="scroll-left" 
+              class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm p-4 rounded-full shadow-xl hover:bg-white transition-all transform -translate-x-2 md:translate-x-0">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <!-- Scrollable Container -->
+      <div class="flex overflow-x-auto scroll-smooth space-x-6 pb-8" id="scroll-container">
+        <!-- Service Cards -->
+        <div class="flex space-x-6">
+          <!-- Service Card 1 -->
+          <div class="w-80 h-96 shrink-0 relative group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl z-10"></div>
+            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8" 
+                 alt="Car Maintenance" 
+                 class="w-full h-full object-cover rounded-2xl shadow-lg group-hover:scale-[1.02] transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+              <h3 class="text-xl font-bold mb-2">Complete Maintenance</h3>
+              <p class="text-sm opacity-90 mb-4">Professional servicing & diagnostics</p>
+              <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition-opacity opacity-0 group-hover:opacity-100">
+                Call Now →
+              </button>
+            </div>
+          </div>
+          <!-- Service Card 1 -->
+          <div class="w-80 h-96 shrink-0 relative group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl z-10"></div>
+            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGNhcnxlbnwwfHwwfHx8MA%3D%3D" 
+                 alt="Car Maintenance" 
+                 class="w-full h-full object-cover rounded-2xl shadow-lg group-hover:scale-[1.02] transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+              <h3 class="text-xl font-bold mb-2">Complete Maintenance</h3>
+              <p class="text-sm opacity-90 mb-4">Professional servicing & diagnostics</p>
+              <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition-opacity opacity-0 group-hover:opacity-100">
+                Call Now →
+              </button>
+            </div>
+          </div>
+          <!-- Service Card 1 -->
+          <div class="w-80 h-96 shrink-0 relative group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl z-10"></div>
+            <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGNhcnxlbnwwfHwwfHx8MA%3D%3D" 
+                 alt="Car Maintenance" 
+                 class="w-full h-full object-cover rounded-2xl shadow-lg group-hover:scale-[1.02] transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+              <h3 class="text-xl font-bold mb-2">Complete Maintenance</h3>
+              <p class="text-sm opacity-90 mb-4">Professional servicing & diagnostics</p>
+              <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition-opacity opacity-0 group-hover:opacity-100">
+                Call Now →
+              </button>
+            </div>
+          </div>
+          <!-- Service Card 1 -->
+          <div class="w-80 h-96 shrink-0 relative group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl z-10"></div>
+            <img src="https://images.unsplash.com/photo-1469285994282-454ceb49e63c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhcnxlbnwwfHwwfHx8MA%3D%3D" 
+                 alt="Car Maintenance" 
+                 class="w-full h-full object-cover rounded-2xl shadow-lg group-hover:scale-[1.02] transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+              <h3 class="text-xl font-bold mb-2">Complete Maintenance</h3>
+              <p class="text-sm opacity-90 mb-4">Professional servicing & diagnostics</p>
+              <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition-opacity opacity-0 group-hover:opacity-100">
+                Call Now →
+              </button>
+            </div>
+          </div>
+          <!-- Service Card 1 -->
+          <div class="w-80 h-96 shrink-0 relative group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl z-10"></div>
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhcnxlbnwwfHwwfHx8MA%3D%3D" 
+                 alt="Car Maintenance" 
+                 class="w-full h-full object-cover rounded-2xl shadow-lg group-hover:scale-[1.02] transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+              <h3 class="text-xl font-bold mb-2">Complete Maintenance</h3>
+              <p class="text-sm opacity-90 mb-4">Professional servicing & diagnostics</p>
+              <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition-opacity opacity-0 group-hover:opacity-100">
+                Call Now →
+              </button>
+            </div>
+          </div>
+          <!-- Service Card 1 -->
+          <div class="w-80 h-96 shrink-0 relative group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl z-10"></div>
+            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyfGVufDB8fDB8fHww" 
+                 alt="Car Maintenance" 
+                 class="w-full h-full object-cover rounded-2xl shadow-lg group-hover:scale-[1.02] transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+              <h3 class="text-xl font-bold mb-2">Complete Maintenance</h3>
+              <p class="text-sm opacity-90 mb-4">Professional servicing & diagnostics</p>
+              <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition-opacity opacity-0 group-hover:opacity-100">
+                Call Now →
+              </button>
+            </div>
+          </div>
+          <!-- Service Card 1 -->
+          <div class="w-80 h-96 shrink-0 relative group cursor-pointer">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl z-10"></div>
+            <img src="https://images.unsplash.com/photo-1459603677915-a62079ffd002?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FyfGVufDB8fDB8fHww" 
+                 alt="Car Maintenance" 
+                 class="w-full h-full object-cover rounded-2xl shadow-lg group-hover:scale-[1.02] transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+              <h3 class="text-xl font-bold mb-2">Complete Maintenance</h3>
+              <p class="text-sm opacity-90 mb-4">Professional servicing & diagnostics</p>
+              <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-700 transition-opacity opacity-0 group-hover:opacity-100">
+                Call Now →
+              </button>
+            </div>
+          </div>
+
+          <!-- Other Service Cards (2-6) remain the same -->
+          <!-- ... -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Scroll by 80% of container width each click
+  function scrollHorizontally(amount) {
+    const container = document.getElementById('scroll-container');
+    const scrollAmount = amount * (container.clientWidth * 0.8);
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  // Hook up the buttons
+  document.getElementById('scroll-left')
+    .addEventListener('click', () => scrollHorizontally(-1));
+  document.getElementById('scroll-right')
+    .addEventListener('click', () => scrollHorizontally(1));
+
+  // Initialize hover effects for service-card buttons
+  document.querySelectorAll('.service-card').forEach(card => {
+    const btn = card.querySelector('button');
+    card.addEventListener('mouseenter', () => btn.style.opacity = '1');
+    card.addEventListener('mouseleave', () => btn.style.opacity = '0');
+  });
+</script>
+
+<style>
+/* Custom scrollbar */
+#scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+#scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Hide scrollbar but keep functionality */
+#scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+#scroll-container::-webkit-scrollbar {
+  display: none;
+}
+</style>
+  
+  <!-- interactive card section -->
+  <section class="bg-gray-100 min-h-screen flex items-center py-2">
+    <div class="max-w-5xl mx-auto w-full">
+        <!-- Heading -->
+        <div class="text-center mb-8">
+            <h2 class="font-bold text-2xl mb-2">
+                <span class="block text-4xl font-heading font-bold text-yellow-600">CAR SERVICES</span>
+                <span class="block text-3xl mt-1 font-subheading text-blue-800">ANYTIME, ANYWHERE</span>
+            </h2>
+        </div>
+
+        <!-- Services Row -->
+        <div class="flex justify-center ">
+            <div class="inline-flex overflow-x-auto scrollbar-hide border rounded-lg bg-white shadow-sm">
+                <!-- Battery Change -->
+                <div class="service-option flex-shrink-0 w-32 p-4 border-r border-gray-200 hover:bg-blue-900 group cursor-pointer flex flex-col items-center justify-center">
+                    <div class="text-blue-600 text-2xl mb-2 group-hover:text-white">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h3 class="font-medium text-sm group-hover:text-white">BATTERY</h3>
+                    <p class="text-gray-500 text-xs group-hover:text-white">CHANGE</p>
+                </div>
+
+                <!-- Oil Change -->
+                <div class="service-option flex-shrink-0 w-32 p-4 border-r border-gray-200 hover:bg-blue-900 group cursor-pointer flex flex-col items-center justify-center">
+                    <div class="text-blue-600 text-2xl mb-2 group-hover:text-white">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3 class="font-medium text-sm group-hover:text-white">OIL</h3>
+                    <p class="text-gray-500 text-xs group-hover:text-white">CHANGE</p>
+                </div>
+
+                <!-- Tyre Change -->
+                <div class="service-option flex-shrink-0 w-32 p-4 border-r border-gray-200 hover:bg-blue-900 group cursor-pointer flex flex-col items-center justify-center">
+                    <div class="text-blue-600 text-2xl mb-2 group-hover:text-white">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3 class="font-medium text-sm group-hover:text-white">TYRE</h3>
+                    <p class="text-gray-500 text-xs group-hover:text-white">CHANGE</p>
+                </div>
+
+                <!-- AC Service -->
+                <div class="service-option flex-shrink-0 w-32 p-4 border-r border-gray-200 hover:bg-blue-900 group cursor-pointer flex flex-col items-center justify-center">
+                    <div class="text-blue-600 text-2xl mb-2 group-hover:text-white">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3 class="font-medium text-sm group-hover:text-white">AC</h3>
+                    <p class="text-gray-500 text-xs group-hover:text-white">SERVICE</p>
+                </div>
+
+                <!-- Car Repair -->
+                <div class="service-option flex-shrink-0 w-32 p-4 border-r border-gray-200 hover:bg-blue-900 group cursor-pointer flex flex-col items-center justify-center">
+                    <div class="text-blue-600 text-2xl mb-2 group-hover:text-white">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="font-medium text-sm group-hover:text-white">CAR</h3>
+                    <p class="text-gray-500 text-xs group-hover:text-white">REPAIR</p>
+                </div>
+
+                <!-- Suspension Repair -->
+                <div class="service-option flex-shrink-0 w-32 p-4 border-r border-gray-200 hover:bg-blue-900 group cursor-pointer flex flex-col items-center justify-center">
+                    <div class="text-blue-600 text-2xl mb-2 group-hover:text-white">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3 class="font-medium text-sm group-hover:text-white">SUSPENSION</h3>
+                    <p class="text-gray-500 text-xs group-hover:text-white">REPAIR</p>
+                </div>
+
+                <!-- Brake Pads -->
+                <div class="service-option flex-shrink-0 w-32 p-4 border-r border-gray-200 hover:bg-blue-900 group cursor-pointer flex flex-col items-center justify-center">
+                    <div class="text-blue-600 text-2xl mb-2 group-hover:text-white">
+                        <i class="fas fa-stop-circle"></i>
+                    </div>
+                    <h3 class="font-medium text-sm group-hover:text-white">BRAKE</h3>
+                    <p class="text-gray-500 text-xs group-hover:text-white">PADS</p>
+                </div>
+
+                <!-- Service Package -->
+                <div class="service-option flex-shrink-0 w-32 p-4 hover:bg-blue-900 group cursor-pointer flex flex-col items-center justify-center">
+                    <div class="text-blue-600 text-2xl mb-2 group-hover:text-white">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="font-medium text-sm group-hover:text-white">SERVICE</h3>
+                    <p class="text-gray-500 text-xs group-hover:text-white">PACKAGE</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Container -->
+        <div class="flex flex-col md:flex-row">
+            <!-- Dynamic Left Info Section -->
+            <div class="bg-white p-6 md:p-8 border-r border-gray-200 md:w-1/2" id="dynamic-content">
+                <!-- Content loaded dynamically -->
+            </div>
+
+            <!-- Right Form Section -->
+            <div class="bg-white p-6 md:p-8 md:w-1/2">
+              <form class="space-y-4">
+                <!-- Name & Mobile in one row -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    class="w-full px-4 py-4 border border-gray-300 rounded-none text-sm focus:ring-2 focus:ring-blue-500"
+                    placeholder="Full Name"
+                  >
+                  <input
+                    type="tel"
+                    class="w-full px-4 py-4 border border-gray-300 rounded-none text-sm focus:ring-2 focus:ring-blue-500"
+                    placeholder="Mobile e.g. 0561234567"
+                  >
+                </div>
+            
+                <!-- Location on its own row -->
+                <div>
+                  <input
+                    type="text"
+                    class="w-full px-4 py-4 border border-gray-300 rounded-none text-sm focus:ring-2 focus:ring-blue-500"
+                    placeholder="Location"
+                  >
+                </div>
+            
+                <!-- Smaller submit button -->
+                <button
+                  type="submit"
+                  class="bg-blue-900 text-white py-4 px-8 hover:bg-blue-800 transition text-sm font-semibold rounded-xl block mx-auto"
+                >
+                  SUBMIT
+                </button>
+              </form>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<script>
+const serviceData = {
+    'BATTERY': {
+        title: 'CAR BATTERY REPLACEMENT',
+        features: [
+            {icon: 'clock', text: '24x7 Service & Warranty Claims'},
+            {icon: 'star', text: '4.9 Rating With 12,000+ Google Reviews'},
+            {icon: 'map-marker-alt', text: 'Installation At Your Location'}
+        ]
+    },
+    'OIL': {
+        title: 'PROFESSIONAL OIL CHANGE',
+        features: [
+            {icon: 'clock', text: '30-Minute Service Guarantee'},
+            {icon: 'star', text: '4.8 Rating With 8,000+ Reviews'},
+            {icon: 'cogs', text: 'Full Fluid System Check'}
+        ]
+    },
+    'TYRE': {
+        title: 'TYRE CHANGE SERVICE',
+        features: [
+            {icon: 'car-side', text: 'Mobile Fitting Service'},
+            {icon: 'compass', text: 'Wheel Alignment Check'},
+            {icon: 'shield-alt', text: 'Quality Guarantee'}
+        ]
+    },
+    'AC': {
+        title: 'AC REPAIR SERVICE',
+        features: [
+            {icon: 'thermometer-half', text: 'Complete System Diagnostics'},
+            {icon: 'wind', text: 'Gas Recharge Service'},
+            {icon: 'snowflake', text: 'Cooling Optimization'}
+        ]
+    },
+    'CAR': {
+        title: 'COMPLETE CAR REPAIR',
+        features: [
+            {icon: 'certificate', text: 'Certified Mechanics'},
+            {icon: 'box-open', text: 'Genuine Spare Parts'},
+            {icon: 'check-double', text: '100% Service Guarantee'}
+        ]
+    },
+    'SUSPENSION': {
+        title: 'SUSPENSION REPAIR',
+        features: [
+            {icon: 'car', text: 'Shock Absorber Replacement'},
+            {icon: 'ruler-combined', text: 'Alignment Correction'},
+            {icon: 'tachometer-alt', text: 'Ride Quality Check'}
+        ]
+    },
+    'BRAKE': {
+        title: 'BRAKE SYSTEM SERVICE',
+        features: [
+            {icon: 'stop-circle', text: 'Pad Replacement'},
+            {icon: 'circle-notch', text: 'Disc Machining'},
+            {icon: 'search', text: 'Full System Inspection'}
+        ]
+    },
+    'SERVICE': {
+        title: 'PREMIUM SERVICE PACKAGES',
+        features: [
+            {icon: 'calendar-star', text: 'Custom Maintenance Plans'},
+            {icon: 'clock', text: 'Priority Scheduling'},
+            {icon: 'tags', text: 'Exclusive Discounts'}
+        ]
+    }
+};
+
+document.querySelectorAll('.service-option').forEach(service => {
+    service.addEventListener('click', function() {
+        // Remove active states
+        document.querySelectorAll('.service-option').forEach(s => {
+            s.classList.remove('bg-blue-900', 'text-white');
+            s.querySelector('div').classList.remove('text-white');
+        });
+
+        // Add active state
+        this.classList.add('bg-blue-900', 'text-white');
+        this.querySelector('div').classList.add('text-white');
+
+        // Get service data
+        const serviceName = this.querySelector('h3').textContent;
+        const serviceInfo = serviceData[serviceName];
+
+        // Update dynamic content
+        const dynamicContent = document.getElementById('dynamic-content');
+        dynamicContent.innerHTML = `
+            <h3 class="text-blue-900 font-semibold text-lg text-center mb-6">
+                ${serviceInfo.title}
+            </h3>
+            <div class="space-y-4">
+                ${serviceInfo.features.map(feature => `
+                    <div class="flex items-center text-gray-600 text-sm p-3 hover:bg-gray-50 rounded-lg">
+                        <i class="fas fa-${feature.icon} text-blue-600 mr-3 w-5"></i>
+                        <span>${feature.text}</span>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    });
+});
+
+// Activate first service on load
+document.querySelector('.service-option').click();
+
+// Form submission handler
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Service request submitted successfully!');
+    document.querySelectorAll('.service-option').forEach(s => {
+        s.classList.remove('bg-blue-900', 'text-white');
+        s.querySelector('div').classList.remove('text-white');
+    });
+    e.target.reset();
+});
+</script>
+
+<style>
+.scrollbar-hide::-webkit-scrollbar {
+    height: 5px;
+}
+.scrollbar-hide::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+.service-option {
+    transition: all 0.2s ease;
+    min-height: 120px;
+}
+</style>
+
+
+  <div class="why-choose-section bg-[#f0f8ff] py-16 px-4" id="menu">
+    <div class="why-container mx-auto max-w-6xl flex flex-col lg:flex-row gap-12">
+        <!-- Left Text Content -->
+        <div class="lg:w-1/2 text-left">
+            <h1 class="text-4xl font-bold text-[#1a237e] mb-6" id="yellow">
+                WHY CHOOSE US?
+            </h1>
+            
+            <p class="text-white text-lg leading-relaxed mb-8 max-w-2xl">
+                Welcome to CarbonCars, UAE's most trusted onsite car care provider. 
+                With our fleet of mobile units and certified technicians available 24/7, 
+                we deliver professional maintenance services at your location across the UAE.
+            </p>
+        </div>
+
+        <!-- Right Stats Grid -->
+        <div class="lg:w-1/2">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Stat Items with Icons -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform" >
+                    <i class="fas fa-car text-blue-600 text-2xl"></i>
+                    <div class="text-right">
+                        <div class="text-3xl font-bold text-[#1a237e]">40+</div>
+                        <div class="text-gray-600 text-xs uppercase mt-1">Service Vehicles</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform" >
+                    <i class="fas fa-stopwatch text-blue-600 text-2xl"></i>
+                    <div class="text-right">
+                        <div class="text-3xl font-bold text-[#1a237e]">25</div>
+                        <div class="text-gray-600 text-xs uppercase mt-1">Min Response</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform">
+                    <i class="fas fa-briefcase text-blue-600 text-2xl"></i>
+                    <div class="text-right">
+                        <div class="text-3xl font-bold text-[#1a237e]">13+</div>
+                        <div class="text-gray-600 text-xs uppercase mt-1">Years Experience</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform">
+                    <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                    <div class="text-right">
+                        <div class="text-3xl font-bold text-[#1a237e]">24/7</div>
+                        <div class="text-gray-600 text-xs uppercase mt-1">Support</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform">
+                    <i class="fas fa-comments text-blue-600 text-2xl"></i>
+                    <div class="text-right">
+                        <div class="text-3xl font-bold text-[#1a237e]">12K+</div>
+                        <div class="text-gray-600 text-xs uppercase mt-1">Reviews</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform">
+                    <i class="fas fa-star text-blue-600 text-2xl"></i>
+                    <div class="text-right">
+                        <div class="text-3xl font-bold text-[#1a237e]">4.9★</div>
+                        <div class="text-gray-600 text-xs uppercase mt-1">Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section  class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 text-center">
+    <!-- Title -->
+    <h2 class="text-4xl font-bold text-blue-700 mb-12">HOW IT WORKS</h2>
+
+    <!-- Steps Wrapper -->
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-center gap-12">
+      
+      <!-- Step 1 -->
+      <div class="group flex flex-col items-center space-y-4">
+        <!-- Icon Wrapper -->
+        <div
+          class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center
+                 p-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <img
+            src="https://battmobile.ae/wp-content/uploads/2024/01/setting.svg"
+            alt="Settings icon"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <!-- Numbered Title -->
+        <h3 class="text-3xl font-semibold text-blue-800">1. Book A Service</h3>
+        <p class="text-gray-600 max-w-xs">
+          Call us, book a service and confirm your order.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="group flex flex-col items-center space-y-4">
+        <div
+          class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center
+                 p-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <img
+            src="https://battmobile.ae/wp-content/uploads/2024/01/loaction.svg"
+            alt="Location pin icon"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <h3 class="text-3xl font-semibold text-blue-800">2. Track Your Order</h3>
+        <p class="text-gray-600 max-w-xs">
+          Track our technician’s live location to avoid problem.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="group flex flex-col items-center space-y-4">
+        <div
+          class="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center
+                 p-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <img
+            src="https://battmobile.ae/wp-content/uploads/2024/01/car.svg"
+            alt="Car icon"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <h3 class="text-3xl font-semibold text-blue-800">3. Job Done</h3>
+        <p class="text-gray-600 max-w-xs">
+          Give us your valuable feedback on our Google page.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- services section -->
+<!-- Section 1: Image left, text right; full‑width on mobile -->
+<section id="services" class="py-16 px-0 md:px-16 bg-white">
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+      
+      <!-- Text Column -->
+      <div class="w-full md:w-1/2 text-left">
+        <h2 class="text-4xl font-bold text-blue-700 uppercase mb-6">Our Services</h2>
+        <p class="text-gray-700 mb-6">
+          CarbonCars is your all‑in‑one car care and repair services provider in Dubai. We can handle all of your car repair and maintenance requirements. In addition to laudable onsite car servicing, we have a spacious service center in Al Quoz, Dubai, where our technicians use cutting‑edge technology to diagnose and repair all kinds of car issues with utmost efficiency and accuracy. Our services menu comprises complete car safety and maintenance that includes:
+        </p>
+        <ul class="list-disc list-inside space-y-3 text-yellow-600">
+          <li>Battery Replacement</li>
+          <li>Oil Change (Minor & Major Services)</li>
+          <li>Steering & Suspension Repair</li>
+          <li>Tyre Change</li>
+          <li>Car AC Repair</li>
+          <li>Vehicle Diagnostics</li>
+          <li>Car Recovery</li>
+        </ul>
+      </div>
+
+      <!-- Image Column -->
+      <div class="w-full md:w-1/2">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1667520550378-b10d85a3c209?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Technician working on car"
+          class="w-full h-auto rounded-lg shadow-lg object-cover"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Text + Stats + Button; collage hidden on mobile -->
+<section id="features" class="py-16 bg-white">
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-12">
+      
+      <!-- Collage Column (hidden on mobile) -->
+      <div class="hidden md:block w-full md:w-1/2 relative">
+        <div class="relative h-[500px]">
+          <!-- Large Bottom Image -->
+          <img
+            src="https://images.unsplash.com/photo-1622329821376-a19fd6002562?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fGNhciUyMHRlY2huaWNpYW58ZW58MHx8MHx8fDA%3D"
+            alt="Service Center"
+            class="absolute bottom-0 left-0 w-full max-w-md h-3/4 object-cover rounded-xl shadow-xl border-4 border-white"
+          />
+          <!-- Medium Top Image -->
+          <img
+            src="https://images.unsplash.com/photo-1680431369961-83a5d3f965f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGNhciUyMHRlY2huaWNpYW58ZW58MHx8MHx8fDA%3D"
+            alt="Car Battery Service"
+            class="absolute top-0 right-0 w-3/4 max-w-sm h-2/3 object-cover rounded-xl shadow-xl border-4 border-white z-10"
+          />
+          <!-- Small Overlay Image -->
+          <img
+            src="https://images.unsplash.com/photo-1677938438599-a55528c41b2c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhciUyMHRlY2huaWNpYW58ZW58MHx8MHx8fDA%3D"
+            alt="Certified Technicians"
+            class="absolute bottom-20 right-4 w-1/3 max-w-xs h-1/3 object-cover rounded-lg shadow-lg border-4 border-white z-20"
+          />
+        </div>
+      </div>
+
+      <!-- Text + Stats + Button -->
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 uppercase mb-4 md:mb-6 leading-tight">
+          CarbonCars – Your Trusted Car Services Provider
+        </h2>
+        
+        <p class="text-gray-700 mb-6 text-base md:text-lg leading-relaxed border-l-4 border-blue-600 pl-4">
+          CarbonCars is the premier battery replacement specialist in the UAE, offering comprehensive automotive solutions across all seven emirates. With over a decade of trusted service, we've expanded our expertise beyond batteries to become your complete car care partner.
+        </p>
+
+        <!-- Responsive Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold md:text-base">13</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 text-sm md:text-base">Years Experience</p>
+              <p class="text-xs md:text-sm text-gray-600">Proven track record since 2010</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-bold md:text-base">4.9</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 text-sm md:text-base">Google Rating</p>
+              <p class="text-xs md:text-sm text-gray-600">12,000+ Verified Reviews</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 text-sm md:text-base">24/7 Support</p>
+              <p class="text-xs md:text-sm text-gray-600">Emergency roadside assistance</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 text-sm md:text-base">25‑Minute Service</p>
+              <p class="text-xs md:text-sm text-gray-600">Average turnaround time</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional bullet features -->
+        <div class="space-y-3 mb-8">
+          <div class="flex items-center space-x-2 text-gray-700 text-sm md:text-base">
+            <div class="w-5 h-5 md:w-6 md:h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <p>45,000 sq ft state‑of‑the‑art service center</p>
+          </div>
+          <div class="flex items-center space-x-2 text-gray-700 text-sm md:text-base">
+            <div class="w-5 h-5 md:w-6 md:h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <p>100% genuine parts & inventory</p>
+          </div>
+          <div class="flex items-center space-x-2 text-gray-700 text-sm md:text-base">
+            <div class="w-5 h-5 md:w-6 md:h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <p>ASE‑certified technicians & advisors</p>
+          </div>
+        </div>
+
+        <!-- Button: full‑width on mobile -->
+        <div class="text-center">
+          <button class="w-full md:w-auto bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition transform hover:scale-105 shadow-lg">
+            Explore Our Services →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Mobile Buttons (Bottom Bar) -->
+<div class="fixed md:hidden bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-3 px-4 flex justify-between items-center z-50">
+  <!-- Phone Button -->
+  <a href="tel:+971500000009" 
+     class="bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center rounded-full shadow-lg 
+            px-6 py-3 transition-all flex-1 mr-2">
+      <i class="fas fa-phone-alt text-sm mr-2"></i>
+      <span class="font-semibold text-sm whitespace-nowrap">Call Now</span>
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/+971500000000" 
+     target="_blank"
+     class="bg-green-500 hover:bg-green-600 text-white flex items-center justify-center rounded-full shadow-lg 
+            px-6 py-3 transition-all flex-1 ml-2 relative">
+      <i class="fab fa-whatsapp text-sm mr-2"></i>
+      <span class="font-semibold text-sm whitespace-nowrap">WhatsApp</span>
+      <span class="absolute -top-2 -right-2 h-5 w-5 bg-red-500 rounded-full text-xs flex items-center justify-center text-white border-2 border-white">
+          !
+      </span>
+  </a>
+</div>
+
+<!-- Desktop WhatsApp Button -->
+<div class="hidden md:fixed md:flex md:bottom-6 md:right-6 z-50">
+  <a href="https://wa.me/+971500000000" 
+     target="_blank"
+     class="bg-green-500 hover:bg-green-600 text-white flex items-center rounded-full shadow-xl 
+            px-6 py-4 transition-all group animate-pulse hover:animate-none">
+      <i class="fab fa-whatsapp text-2xl"></i>
+      <span class="ml-3 font-medium text-sm transition-transform group-hover:translate-x-1">
+          Chat Now
+      </span>
+      <span class="absolute -top-2 -right-2 h-5 w-5 bg-red-500 rounded-full text-xs flex items-center justify-center text-white border-2 border-white">
+          !
+      </span>
+  </a>
+</div>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-blue-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <!-- About Section -->
+        <div class="md:col-span-2">
+          <h4 class="text-2xl font-bold mb-4">CarbonMobile</h4>
+          <p class="text-white text-sm leading-relaxed">
+            Your trusted partner in premium automotive solutions. We provide high-quality 
+            car services and genuine spare parts with unmatched customer support.
+          </p>
+          <div class="mt-6 flex space-x-4">
+            <a href="#" class="text-white hover:text-white">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-white">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-white">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-white">
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-white">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-white">
+              <i class="fab fa-tiktok text-xl"></i>
+            </a>
+          </div>
+        </div>
+  
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-white hover:text-white text-sm">About Us</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Our Services</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Brands We Serve</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Careers</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Blog</a></li>
+          </ul>
+        </div>
+  
+        <!-- Our Services -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-white hover:text-white text-sm">Battery Replacement</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Tyre Services</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Car Maintenance</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">AC Repair</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">24/7 Roadside Assistance</a></li>
+          </ul>
+        </div>
+  
+        <!-- Car Brands -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Car Brands</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-white hover:text-white text-sm">German Cars</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Japanese Cars</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">American Cars</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Luxury Brands</a></li>
+            <li><a href="#" class="text-white hover:text-white text-sm">Commercial Vehicles</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Us -->
+        <div id="yellow">
+          <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-2 text-blue-200 text-sm" id="yellow">
+            <li>123 Automotive Street</li>
+            <li>Dubai, UAE</li>
+            <li class="mt-2">
+              <a href="tel:+97180078278" class="hover:text-white" id="yellow">
+                <i class="fas fa-phone mr-2" id="yellow"></i>800-78278
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@carbonmobile.com" class="hover:text-white">
+                <i class="fas fa-envelope mr-2"></i>info@carbonmobile.com
+              </a>
+            </li>
+            <li class="mt-4">
+              <strong>Working Hours:</strong>
+              <p class="mt-1">24/7 Emergency Services<br>
+              Regular Hours: 8AM - 10PM</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Copyright Section -->
+      <div class="border-t border-blue-700 mt-8 pt-8 text-center">
+        <div class="flex flex-col md:flex-row justify-between items-center text-white text-sm">
+          <p>&copy; 2023 CarbonMobile. All rights reserved.</p>
+          <div class="mt-4 md:mt-0">
+            <a href="#" class="hover:text-white mx-2">Privacy Policy</a>
+            <a href="#" class="hover:text-white mx-2">Terms of Service</a>
+            <a href="#" class="hover:text-white mx-2">Cookie Policy</a>
+          </div>
+        </div>
+        <p class="mt-4 text-xs text-white">
+          CarbonCars is a trading name of AutoCare Solutions FZ-LLC
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

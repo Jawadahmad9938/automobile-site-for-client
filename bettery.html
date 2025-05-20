@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bettery Change</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarbonCars - Premium Car Spare Parts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/img/imggg.png" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav id="menu" class="shadow-md w-full relative bg-white">
+      <div class="max-w-screen-xl w-full mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <a href="index.html" class="text-xl bungee-tint-regular flex items-center">
+            <img
+              src="/img/imggg.png"
+              alt="Logo"
+              class="w-24 h-12 object-contain"
+            />
+          </a>
+
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex flex-wrap gap-6 items-center">
+            <!-- Our Company Dropdown -->
+            <li class="group relative">
+              <a
+                href="#"
+                class="flex items-center text-white hover:text-blue-600 transition"
+              >
+                Our Company <i class="fa-solid fa-plus ml-1 text-sm"></i>
+              </a>
+              <ul
+                class="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible z-10"
+              >
+                <li class="hover:bg-blue-50">
+                  <a
+                    href="https://yourdomain.com/about-us/"
+                    class="block px-4 py-2"
+                    >About</a
+                  >
+                </li>
+                <li class="hover:bg-blue-50">
+                  <a
+                    href="https://yourdomain.com/event/"
+                    class="block px-4 py-2"
+                    >Event</a
+                  >
+                </li>
+                <li class="hover:bg-blue-50">
+                  <a
+                    href="https://yourdomain.com/careers/"
+                    class="block px-4 py-2"
+                    >Careers</a
+                  >
+                </li>
+                <li class="hover:bg-blue-50">
+                  <a
+                    href="https://yourdomain.com/recommendation/"
+                    class="block px-4 py-2"
+                    >Recommendation</a
+                  >
+                </li>
+                <li class="hover:bg-blue-50">
+                  <a href="https://yourdomain.com/blog/" class="block px-4 py-2"
+                    >Blog</a
+                  >
+                </li>
+                <li class="hover:bg-blue-50">
+                  <a href="https://yourdomain.com/team/" class="block px-4 py-2"
+                    >Our Team</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="group relative">
+              <a
+                href="#"
+                class="dropdown-trigger flex items-center text-white hover:text-blue-600 transition"
+              >
+                Services <i class="fa-solid fa-plus ml-1 text-sm"></i>
+              </a>
+              <ul
+                class="dropdown-menu absolute left-0 mt-2 w-64 bg-white border rounded-md shadow-lg opacity-0 invisible transition-opacity duration-300 z-10"
+              >
+                <li class="group relative hover:bg-blue-50">
+                  <a
+                    href="#"
+                    class="dropdown-trigger flex justify-between items-center px-4 py-2"
+                  >
+                    Car Repair <i class="fa-solid fa-chevron-right text-xs"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu absolute top-0 left-full w-64 bg-white border rounded-md shadow-lg opacity-0 invisible"
+                  >
+                    <li class="hover:bg-blue-50">
+                      <a href="#" class="block px-4 py-2">Electrical</a>
+                    </li>
+                    <li class="hover:bg-blue-50">
+                      <a href="#" class="block px-4 py-2">Mechanical</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="hover:bg-blue-50">
+                  <a href="bettery.html" class="block px-4 py-2"
+                    >battery Change</a
+                  >
+                </li>
+                <li class="hover:bg-blue-50">
+                  <a href="#" class="block px-4 py-2">Tyre Change</a>
+                </li>
+              </ul>
+            </li>
+
+            <style>
+              .dropdown-menu.show {
+                opacity: 1 !important;
+                visibility: visible !important;
+              }
+
+              .dropdown-trigger.active i {
+                transform: rotate(45deg);
+              }
+            </style>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                let activeMenu = null;
+                let leaveTimer = null;
+
+                // Handle dropdown triggers
+                document
+                  .querySelectorAll(".dropdown-trigger")
+                  .forEach((trigger) => {
+                    trigger.addEventListener("click", function (e) {
+                      e.preventDefault();
+                      const menu = this.nextElementSibling;
+                      const isOpen = menu.classList.contains("show");
+
+                      if (activeMenu && activeMenu !== menu) {
+                        closeMenu(activeMenu);
+                      }
+
+                      if (!isOpen) {
+                        openMenu(menu, trigger);
+                      } else {
+                        closeMenu(menu);
+                      }
+                    });
+                  });
+
+                // Handle menu hover states
+                document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+                  menu.addEventListener("mouseenter", () =>
+                    clearTimeout(leaveTimer)
+                  );
+                  menu.addEventListener("mouseleave", () =>
+                    startCloseTimer(menu)
+                  );
+                });
+
+                function openMenu(menu, trigger) {
+                  menu.classList.add("show");
+                  trigger.querySelector("i")?.classList.add("active");
+                  activeMenu = menu;
+                }
+
+                function closeMenu(menu) {
+                  menu.classList.remove("show");
+                  menu.parentElement
+                    .querySelector(".dropdown-trigger i")
+                    ?.classList.remove("active");
+                  activeMenu = null;
+                }
+
+                function startCloseTimer(menu) {
+                  leaveTimer = setTimeout(() => {
+                    if (activeMenu === menu) {
+                      closeMenu(menu);
+                    }
+                  }, 300);
+                }
+
+                // Close all menus when clicking outside
+                document.addEventListener("click", function (e) {
+                  if (
+                    !e.target.closest(".dropdown-menu") &&
+                    !e.target.closest(".dropdown-trigger")
+                  ) {
+                    document
+                      .querySelectorAll(".dropdown-menu")
+                      .forEach((menu) => closeMenu(menu));
+                  }
+                });
+              });
+            </script>
+            <!-- Other Desktop Menu Items -->
+            <li>
+              <a href="#" class="text-white hover:text-blue-600 transition"
+                >Car Brands</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:text-blue-600 transition"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://yourdomain.com/gold-package/"
+                class="bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600 transition"
+              >
+                Gold Packages
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+97180078278"
+                class="flex items-center text-white hover:text-blue-600 transition"
+              >
+                <i class="fa-solid fa-phone mr-1"></i>
+                800-78278
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden text-gray-700">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+          <ul class="px-4 py-4 space-y-3">
+            <li class="mobile-menu-item">
+              <div class="flex justify-between items-center">
+                <span>Our Company</span>
+                <button class="mobile-submenu-toggle p-2">
+                  <i class="fa-solid fa-plus text-sm"></i>
+                </button>
+              </div>
+              <ul class="mobile-submenu pl-4 mt-1 space-y-2 hidden">
+                <li>
+                  <a
+                    href="https://yourdomain.com/about-us/"
+                    class="block py-1.5"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a href="https://yourdomain.com/event/" class="block py-1.5"
+                    >Event</a
+                  >
+                </li>
+                <li>
+                  <a href="https://yourdomain.com/careers/" class="block py-1.5"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://yourdomain.com/recommendation/"
+                    class="block py-1.5"
+                    >Recommendation</a
+                  >
+                </li>
+                <li>
+                  <a href="https://yourdomain.com/blog/" class="block py-1.5"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a href="https://yourdomain.com/team/" class="block py-1.5"
+                    >Our Team</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="mobile-menu-item">
+              <div class="flex justify-between items-center">
+                <span>Services</span>
+                <button class="mobile-submenu-toggle p-2">
+                  <i class="fa-solid fa-plus text-sm"></i>
+                </button>
+              </div>
+              <ul class="mobile-submenu pl-4 mt-1 space-y-2 hidden">
+                <li>
+                  <div class="flex justify-between items-center">
+                    <span>Car Repair</span>
+                    <button class="nested-submenu-toggle p-2">
+                      <i class="fa-solid fa-plus text-sm"></i>
+                    </button>
+                  </div>
+                  <ul class="nested-submenu pl-4 hidden">
+                    <li><a href="#" class="block py-1.5">Electrical</a></li>
+                    <li><a href="#" class="block py-1.5">Mechanical</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="block py-1.5">Oil Change</a></li>
+                <li><a href="#" class="block py-1.5">Tyre Change</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" class="block py-2">Car Brands</a></li>
+            <li><a href="#" class="block py-2">Products</a></li>
+            <li>
+              <a
+                href="https://yourdomain.com/gold-package/"
+                class="block py-2 text-blue-600 font-medium"
+                >Gold Packages</a
+              >
+            </li>
+            <li>
+              <a href="tel:+97180078278" class="block py-2">
+                <i class="fa-solid fa-phone mr-2"></i>800-78278
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <style>
+      .mobile-submenu {
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .mobile-submenu.active {
+        max-height: 500px;
+      }
+
+      .rotate-icon {
+        transform: rotate(45deg);
+      }
+    </style>
+
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuButton.querySelector("i").classList.toggle("fa-bars");
+        mobileMenuButton.querySelector("i").classList.toggle("fa-xmark");
+      });
+
+      // Submenu Toggle
+      document.querySelectorAll(".mobile-submenu-toggle").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const submenu = button
+            .closest(".mobile-menu-item")
+            .querySelector(".mobile-submenu");
+          const icon = button.querySelector("i");
+
+          submenu.classList.toggle("active");
+          icon.classList.toggle("fa-plus");
+          icon.classList.toggle("fa-minus");
+          icon.classList.toggle("rotate-icon");
+        });
+      });
+
+      // Nested Submenu Toggle
+      document.querySelectorAll(".nested-submenu-toggle").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const submenu = button.closest("li").querySelector(".nested-submenu");
+          const icon = button.querySelector("i");
+
+          submenu.classList.toggle("active");
+          icon.classList.toggle("fa-plus");
+          icon.classList.toggle("fa-minus");
+          icon.classList.toggle("rotate-icon");
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileMenu.contains(e.target) &&
+          !mobileMenuButton.contains(e.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+          mobileMenuButton.querySelector("i").classList.add("fa-bars");
+          mobileMenuButton.querySelector("i").classList.remove("fa-xmark");
+        }
+      });
+    </script>
+    
+
+<!-- BATTERY REPLACEMENT HERO SECTION -->
+<section class="relative w-screen h-[85vh]">
+  <!-- Full Screen SVG Background -->
+  <img src="/img/BG DESign.svg" alt="Battmobile Van"
+    class="absolute inset-0 w-full h-full object-cover object-[90%] lg:object-center">
+
+  <!-- Text Layer Over the Background (Left Side) -->
+  <div class="relative z-10 flex flex-col items-start justify-center w-full h-full 
+      pt-[220px] pr-4 pb-6 pl-4 lg:pt-12 lg:pr-[120px] lg:pb-12 lg:pl-[120px]">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-400 mb-2 pr-4 lg:pr-8">
+      Special Offer
+    </h2>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight pr-[100px] lg:pr-[2px] lg:pb-[20px] pb-[20px]">
+      25% Discount On All Battery Brands
+    </h1>
+
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-[120px] gap-y-[10px] mb-6 text-white text-sm md:text-base">
+      <li class="flex items-center text-base md:text-xl">
+        <i class="fa-solid fa-check text-white mr-3"></i>Available 24x7
+      </li>
+      <li class="flex items-center text-base md:text-xl">
+        <i class="fa-solid fa-check text-white mr-3"></i>Within 20 Minutes At Your Location
+      </li>
+      <li class="flex items-center text-base md:text-xl">
+        <i class="fa-solid fa-check text-white mr-3"></i>Free Delivery & No Service Charge
+      </li>
+      <li class="flex items-center text-base md:text-xl">
+        <i class="fa-solid fa-check text-white mr-3"></i>Free Jumpstart and Inspection
+      </li>
+      <li class="flex items-center text-base md:text-xl">
+        <i class="fa-solid fa-check text-white mr-3"></i>Battery Warranty Up To 24 Months
+      </li>
+    </ul>
+
+    
+    <a href="https://wa.me/XXXXXXXXXX" target="_blank"
+      class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-base md:text-lg font-semibold transition">
+      <i class="fa-brands fa-whatsapp text-2xl mr-3"></i>Contact via WhatsApp
+    </a>
+  </div>
+</section>
+
+
+
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 text-center">
+        <!-- Title -->
+        <h2 class="text-4xl font-bold text-blue-700 mb-12">HOW IT WORKS?</h2>
+
+        <!-- Steps Wrapper -->
+        <div
+          class="flex flex-col md:flex-row flex-wrap items-start justify-center gap-8 lg:gap-12"
+        >
+          <!-- Step 1 -->
+          <div
+            class="group flex flex-col items-center space-y-4 w-full md:w-[45%] lg:w-[22%]"
+          >
+            <div
+              class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-110"
+            >
+              <img
+                src="https://battmobile.ae/wp-content/uploads/2024/01/Untitled-3.png"
+                alt="Phone icon"
+                class="w-3/4 h-3/4 object-contain"
+              />
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-800">
+              1. Call 800-78278
+            </h3>
+            <p class="text-gray-600 max-w-xs text-sm md:text-base">
+              Just call 800-78278 and our expert customer care agents will
+              assist you with all your queries within 2 minutes of your call.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="group flex flex-col items-center space-y-4 w-full md:w-[45%] lg:w-[22%]"
+          >
+            <div
+              class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-110"
+            >
+              <img
+                src="https://battmobile.ae/wp-content/uploads/2024/01/delivery-truck-1.png"
+                alt="Delivery icon"
+                class="w-3/4 h-3/4 object-contain"
+              />
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-800">
+              2. We Deliver To You
+            </h3>
+            <p class="text-gray-600 max-w-xs text-sm md:text-base">
+              We Will Deliver The Battery To Your Location in 20 Minutes
+              Anywhere in AbuDhabi, Dubai, Sharjah And Ajman.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="group flex flex-col items-center space-y-4 w-full md:w-[45%] lg:w-[22%]"
+          >
+            <div
+              class="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-110"
+            >
+              <img
+                src="https://battmobile.ae/wp-content/uploads/2024/01/install-1.png"
+                alt="Technician icon"
+                class="w-3/4 h-3/4 object-contain"
+              />
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-800">
+              3. We Install It Free
+            </h3>
+            <p class="text-gray-600 max-w-xs text-sm md:text-base">
+              Our Expert Technicians Shall Replace Your Old Battery With The New
+              One And Handover The Battery Warranty To You.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            class="group flex flex-col items-center space-y-4 w-full md:w-[45%] lg:w-[22%]"
+          >
+            <div
+              class="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-110"
+            >
+              <img
+                src="https://battmobile.ae/wp-content/uploads/2024/01/cVector.png"
+                alt="Car ride icon"
+                class="w-3/4 h-3/4 object-contain"
+              />
+            </div>
+            <h3 class="text-2xl font-semibold text-blue-800">
+              4. Enjoy Your Ride
+            </h3>
+            <p class="text-gray-600 max-w-xs text-sm md:text-base">
+              Now, You Are Back On The Road And Trusting Your Ride Has What It
+              Takes For Daily Drive.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Scrolling Logos Container -->
+
+<section class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 overflow-hidden">
+    <h1 class="text-3xl font-bold text-center mb-8">Our Battery Brands</h1>
+
+    <!-- Scrolling Logos Container -->
+    <div id="scrolling-logos" class="flex overflow-hidden relative h-24">
+      <div class="flex animate-scroll whitespace-nowrap items-center">
+        <!-- Logos - duplicated for seamless loop -->
+        <div class="flex items-center space-x-16 mx-8">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/Kays_Battery-1.png" alt="Kays Battery"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/download_DkkU-1.png.webp" alt="Varta"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/1-1-2.png" alt="Brand 1"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/optima-logo-1-1.png.webp" alt="Optima"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/zeetex_itKP-1.png.webp" alt="Zeetex"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/download6_yjdd-1.png.webp" alt="Brand 2"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/WhatsApp-Image-2023-12-05-at-16.png.webp"
+            alt="Brand 3" class="h-20 w-auto transition-transform hover:scale-110">
+          <!-- Duplicated logos -->
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/Kays_Battery-1.png" alt="Kays Battery"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/download_DkkU-1.png.webp" alt="Varta"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/1-1-2.png" alt="Brand 1"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/optima-logo-1-1.png.webp" alt="Optima"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/zeetex_itKP-1.png.webp" alt="Zeetex"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/download6_yjdd-1.png.webp" alt="Brand 2"
+            class="h-20 w-auto transition-transform hover:scale-110">
+          <img src="https://battmobile.ae/wp-content/uploads/2024/01/WhatsApp-Image-2023-12-05-at-16.png.webp"
+            alt="Brand 3" class="h-20 w-auto transition-transform hover:scale-110">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const scrollContainer = document.querySelector('#scrolling-logos');
+    const scrollContent = scrollContainer.querySelector('.animate-scroll');
+
+    // Clone content for seamless looping
+    scrollContent.innerHTML += scrollContent.innerHTML;
+
+    function animateScroll() {
+      const totalWidth = scrollContent.scrollWidth / 2;
+      let scrollPosition = 0;
+
+      function scroll() {
+        scrollPosition -= 1;
+        if (scrollPosition <= -totalWidth) {
+          scrollPosition = 0;
+        }
+        scrollContent.style.transform = `translateX(${scrollPosition}px)`;
+        requestAnimationFrame(scroll);
+      }
+
+      requestAnimationFrame(scroll);
+    }
+
+    // Start animation
+    animateScroll();
+
+    // Pause on hover
+    scrollContainer.addEventListener('mouseenter', () => {
+      scrollContent.style.animationPlayState = 'paused';
+    });
+
+    scrollContainer.addEventListener('mouseleave', () => {
+      scrollContent.style.animationPlayState = 'running';
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      scrollContent.style.transform = 'translateX(0)';
+      animateScroll();
+    });
+  });
+</script>
+
+    <!-- Battery Brands Section -->
+    <section id="battery-brands" class="py-16 px-0 md:px-16 bg-white">
+      <div class="container mx-auto px-4 md:px-0">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <!-- Text Column -->
+          <div class="w-full md:w-1/2 text-left">
+
+            <div class="mb-8">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Why CarbonCars?
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Battmobile is the UAE’s largest car repair precise provider with
+                24/7 customer care and support.
+              </p>
+              <p class="text-lg font-bold text-yellow-500">
+                We have served more than 300,000 happy customers.
+              </p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center gap-3">
+                <svg
+                  class="w-6 h-6 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Best Price Guaranteed</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg
+                  class="w-6 h-6 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Original Battery Brands</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg
+                  class="w-6 h-6 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">24/7 Support</span>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://wa.me/XXXXXXXXXX"
+                class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105"
+              >
+                <svg
+                  class="w-6 h-6 mr-3"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.922-3.556 7.922-7.93 0-2.067-1.005-4.021-2.73-5.498l-.003-.002zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                  />
+                </svg>
+                WhatsApp Us Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div class="w-full md:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1498887960847-2a5e46312788?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Premium car batteries"
+              class="w-full h-auto rounded-xl shadow-lg object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="why-choose-section bg-[#f0f8ff] py-16 px-4" id="menu">
+      <div
+        class="why-container mx-auto max-w-6xl flex flex-col lg:flex-row gap-12"
+      >
+        <!-- Left Text Content -->
+        <div class="lg:w-1/2 text-left">
+          <h1 class="text-4xl font-bold text-yellow-500 mb-6 mt-0">
+            300,000 HAPPY CUSTOMERS
+          </h1>
+
+          <p class="text-white text-lg leading-relaxed mb-8 max-w-2xl">
+            Welcome to CarbonCars, UAE's most trusted onsite car care provider.
+            With our fleet of mobile units and certified technicians available
+            24/7, we deliver professional maintenance services at your location
+            across the UAE.
+          </p>
+        </div>
+
+        <!-- Right Stats Grid -->
+        <div class="lg:w-1/2">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Stat Items with Icons -->
+            <div
+              class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform"
+            >
+              <i class="fas fa-users text-blue-600 text-2xl"></i>
+              <div class="text-right">
+                <div class="text-3xl font-bold text-[#1a237e]">300K</div>
+                <div class="text-gray-600 text-xs uppercase mt-1">
+                  Happy Customers
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform"
+            >
+              <i class="fas fa-car text-blue-600 text-2xl"></i>
+              <div class="text-right">
+                <div class="text-3xl font-bold text-[#1a237e]">40+</div>
+                <div class="text-gray-600 text-xs uppercase mt-1">
+                  On-Road Vehicles
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform"
+            >
+              <i class="fas fa-calendar-alt text-blue-600 text-2xl"></i>
+              <div class="text-right">
+                <div class="text-3xl font-bold text-[#1a237e]">13+</div>
+                <div class="text-gray-600 text-xs uppercase mt-1">
+                  Years of Experience
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform"
+            >
+              <i class="fas fa-stopwatch text-blue-600 text-2xl"></i>
+              <div class="text-right">
+                <div class="text-3xl font-bold text-[#1a237e]">25</div>
+                <div class="text-gray-600 text-xs uppercase mt-1">
+                  Minutes Turnaround
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform"
+            >
+              <i class="fas fa-headset text-blue-600 text-2xl"></i>
+              <div class="text-right">
+                <div class="text-3xl font-bold text-[#1a237e]">24/7</div>
+                <div class="text-gray-600 text-xs uppercase mt-1">
+                  Customer Support
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl shadow-md flex justify-between items-center hover:scale-105 transition-transform"
+            >
+              <i class="fas fa-star text-blue-600 text-2xl"></i>
+              <div class="text-right">
+                <div class="text-3xl font-bold text-[#1a237e]">4.9</div>
+                <div class="text-gray-600 text-xs uppercase mt-1">
+                  Google Rating
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col md:flex-row bg-white">
+        <!-- Left Image Section -->
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1517026575980-3e1e2dedeab4?q=80&w=1998&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Contact us illustration"
+                 class="w-full h-auto max-w-md object-cover rounded-lg shadow-xl hidden md:block">
+        </div>
+    
+        <!-- Right Form Section -->
+        <div class="md:w-1/2 p-8">
+            <h2 class="text-3xl font-bold text-[#1a237e] mb-6">Connect With Us!</h2>
+            
+            <form class="space-y-6">
+                <div>
+                    <input
+                        type="text"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        placeholder="Name"
+                        required
+                    >
+                </div>
+                
+                <div>
+                    <input
+                        type="tel"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        placeholder="Number"
+                        required
+                    >
+                </div>
+    
+                <div>
+                    <input
+                        type="email"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                        placeholder="Email"
+                        required
+                    >
+                </div>
+    
+                <button
+                    type="submit"
+                    class="w-full bg-blue-900 text-white py-3 px-6 hover:bg-blue-800 transition-all font-semibold rounded-lg"
+                >
+                    SUBMIT
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+  <section id="battery-faq" class="py-16 px-4 shadow-lg rounded-lg" style="background-color: #fff1f1;">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-10">🔋 Car Battery FAQ</h2>
+  
+      <div class="space-y-1 text-left">
+        <!-- FAQ Items -->
+        <div class="border-b pb-4">
+          <button
+            class="faq-question flex justify-between items-center w-full text-1xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out hover:bg-gray-100 p-4 rounded-lg shadow-md bg-white">
+            <span>1. How much does it cost to replace a car battery?</span>
+            <svg class="faq-icon w-6 h-6 transition-transform transform rotate-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="faq-answer text-gray-600 mt-2 hidden bg-white p-4 rounded-lg shadow-sm w-full">
+            The cost typically ranges from AED 150 to AED 600, depending on the vehicle type and battery brand.
+          </div>
+        </div>
+  
+        <div class="border-b pb-4">
+          <button
+            class="faq-question flex justify-between items-center w-full text-1xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out hover:bg-gray-100 p-4 rounded-lg shadow-md bg-white">
+            <span>2. How long does car battery last in Dubai?</span>
+            <svg class="faq-icon w-6 h-6 transition-transform transform rotate-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="faq-answer text-gray-600 mt-2 hidden bg-white p-4 rounded-lg shadow-sm w-full">
+            Typically, a car battery in Dubai lasts 2 to 3 years due to extreme heat.
+          </div>
+        </div>
+  
+        <div class="border-b pb-4">
+          <button
+            class="faq-question flex justify-between items-center w-full text-1xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out hover:bg-gray-100 p-4 rounded-lg shadow-md bg-white">
+            <span>3. What are the signs you need a new car battery?</span>
+            <svg class="faq-icon w-6 h-6 transition-transform transform rotate-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="faq-answer text-gray-600 mt-2 hidden bg-white p-4 rounded-lg shadow-sm w-full">
+            Slow engine crank, dim headlights, dashboard warning lights, or a battery older than 3 years.
+          </div>
+        </div>
+  
+        <div class="border-b pb-4">
+          <button
+            class="faq-question flex justify-between items-center w-full text-1xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out hover:bg-gray-100 p-4 rounded-lg shadow-md bg-white">
+            <span>4. How do I know if my battery is dying?</span>
+            <svg class="faq-icon w-6 h-6 transition-transform transform rotate-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="faq-answer text-gray-600 mt-2 hidden bg-white p-4 rounded-lg shadow-sm w-full">
+            Flickering lights, slow start-up, unusual electrical behavior, or frequent jump starts may indicate a dying
+            battery.
+          </div>
+        </div>
+  
+        <div class="border-b pb-4">
+          <button
+            class="faq-question flex justify-between items-center w-full text-1xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out hover:bg-gray-100 p-4 rounded-lg shadow-md bg-white">
+            <span>5. What shortens car battery life?</span>
+            <svg class="faq-icon w-6 h-6 transition-transform transform rotate-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="faq-answer text-gray-600 mt-2 hidden bg-white p-4 rounded-lg shadow-sm w-full">
+            Extreme heat, short trips, frequent electronic use with engine off, and poor maintenance.
+          </div>
+        </div>
+  
+        <div class="border-b pb-4">
+          <button
+            class="faq-question flex justify-between items-center w-full text-1xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out hover:bg-gray-100 p-4 rounded-lg shadow-md bg-white">
+            <span>6. Can your AC drain your battery?</span>
+            <svg class="faq-icon w-6 h-6 transition-transform transform rotate-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="faq-answer text-gray-600 mt-2 hidden bg-white p-4 rounded-lg shadow-sm w-full">
+            Yes, especially if the AC runs while the engine is off or if the alternator is faulty.
+          </div>
+        </div>
+  
+        <div class="border-b pb-4">
+          <button
+            class="faq-question flex justify-between items-center w-full text-1xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out hover:bg-gray-100 p-4 rounded-lg shadow-md bg-white">
+            <span>7. Which is the best car battery brand in Dubai?</span>
+            <svg class="faq-icon w-6 h-6 transition-transform transform rotate-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="faq-answer text-gray-600 mt-2 hidden bg-white p-4 rounded-lg shadow-sm w-full">
+            Top brands include ACDelco, AMARON, VARTA, and Exide – reliable in UAE climate.
+          </div>
+        </div>
+  
+        <div class="border-b pb-4">
+          <button
+            class="faq-question flex justify-between items-center w-full text-1xl font-semibold text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out hover:bg-gray-100 p-4 rounded-lg shadow-md bg-white">
+            <span>8. What are 3 different types of car batteries?</span>
+            <svg class="faq-icon w-6 h-6 transition-transform transform rotate-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <div class="faq-answer text-gray-600 mt-2 hidden bg-white p-4 rounded-lg shadow-sm w-full">
+            1. Lead-Acid Battery<br>
+            2. AGM (Absorbent Glass Mat)<br>
+            3. EFB (Enhanced Flooded Battery)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      
+      <script>
+        document.querySelectorAll('.faq-question').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const answer = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+      
+            answer.classList.toggle('hidden');
+            icon.classList.toggle('rotate-45'); // icon rotates on toggle
+          });
+        });
+      </script>
+              
+      
+
+
+      
+<!-- Mobile Buttons (Bottom Bar) -->
+<div class="fixed md:hidden bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-0 flex z-50">
+  <!-- Phone Button -->
+  <a href="tel:+971500000009" class="bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center rounded-none 
+              w-1/2 py-4 transition-all">
+    <i class="fas fa-phone-alt text-sm mr-2"></i>
+    <span class="font-semibold text-[1.2rem] text-sm whitespace-nowrap">Call Now</span>
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/+971500000000" target="_blank" class="bg-green-500 hover:bg-green-600 text-white flex items-center justify-center rounded-none 
+              w-1/2 py-3 transition-all relative">
+    <i class="fab fa-whatsapp text-sm mr-2"></i>
+    <span class="font-semibold text-[1.2rem] text-sm whitespace-nowrap">WhatsApp</span>
+    <span
+      class="absolute -top-2 -right-2 h-5 w-5 bg-red-500 rounded-full text-xs flex items-center justify-center text-white border-1 border-white">
+      !
+    </span>
+  </a>
+</div>
+
+  
+  <!-- Desktop WhatsApp Button -->
+  <div class="hidden md:fixed md:flex md:bottom-6 md:right-6 z-50">
+    <a href="https://wa.me/+971500000000" 
+       target="_blank"
+       class="bg-green-500 hover:bg-green-600 text-white flex items-center rounded-full shadow-xl 
+              px-6 py-4 transition-all group animate-pulse hover:animate-none">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span class="ml-3 font-medium text-sm transition-transform group-hover:translate-x-1">
+            Chat Now
+        </span>
+        <span class="absolute -top-2 -right-2 h-5 w-5 bg-red-500 rounded-full text-xs flex items-center justify-center text-white border-2 border-white">
+            !
+        </span>
+    </a>
+  </div>
+  
+
+    <footer class="relative text-white py-12" id="footer">
+
+
+      <!-- Back to top button -->
+      <a
+        href="#top"
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-yellow-500 hover:bg-yellow-600 p-3 rounded shadow-lg"
+      >
+        <!-- Up arrow SVG -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-blue-900"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.59 5.58L20 12l-8-8-8 8z"
+          />
+        </svg>
+      </a>
+
+      <div class="container mx-auto px-4 text-center">
+        <!-- Logo + title -->
+        <div class="flex flex-col items-center">
+          <div class="flex items-center space-x-2">
+            <img src="/img/imggg.png" alt="BattMobile" class="h-8" />
+            <span class="text-2xl font-bold text-white">CarbonCars</span>
+          </div>
+          <p class="mt-2 italic text-sm text-blue-200">Think Car. Think Us.</p>
+        </div>
+
+        <!-- dashed line -->
+        <div class="flex justify-center items-center space-x-2 my-6">
+          <span class="block w-8 h-1 bg-yellow-500"></span>
+          <span class="block w-8 h-1 bg-yellow-500"></span>
+          <span class="block w-8 h-1 bg-yellow-500"></span>
+          <span class="block w-8 h-1 bg-yellow-500"></span>
+          <span class="block w-8 h-1 bg-yellow-500"></span>
+          <span class="block w-8 h-1 bg-yellow-500"></span>
+        </div>
+
+        <!-- copyright -->
+        <p class="text-sm lg:pb-0 pb-6">
+          &copy; 2024 A&amp;F Auto Repair LLC — All Rights Reserved.
+        </p>
+        
+      </div>
+    </footer>
+  </body>
+</html>
